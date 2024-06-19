@@ -13,7 +13,7 @@ function App() {
     ]
 
     // callback func
-    const aa = (checkedItems) => {
+    const statusChange = (checkedItems) => {
         console.log('checkbox status change: ', checkedItems);
     }
     return (
@@ -24,7 +24,7 @@ function App() {
             <h3>Checkbox Group</h3>
             <CheckboxGroup
                 options={options}
-                onChange={aa}
+                onChange={statusChange}
             />
         </div>
     );

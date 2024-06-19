@@ -2,8 +2,8 @@
 // 전체선택, 해제 기능
 
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import Checkbox from '../../Atoms/Checkbox/Checkbox'
-import { bool } from 'prop-types'
 
 const CheckboxGroup = ({options, onChange}) => {
 
@@ -50,7 +50,6 @@ const CheckboxGroup = ({options, onChange}) => {
                             key = {option.value}
                             label={option.label}
                             value={option.value}
-                            // 선택되었으면 T, 안되었으면 F
                             checked={checkedItems[option.value] || false}
                             // checked={false}
                             onChange={() => handleChange(option.value)}

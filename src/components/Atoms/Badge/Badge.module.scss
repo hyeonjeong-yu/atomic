@@ -1,0 +1,19 @@
+.Badge {
+    width: 24px;
+    font-size: 12px;
+    border-radius: 8px;
+    padding: 4px 8px;
+
+    &.wait {
+        background-color: #c0dd78;
+        color: #436f00;
+    }
+    &.approve {
+        background-color: #94dcf7;
+        color: #0063b8;
+    }
+    &.return {
+        background-color: #ffc3c9;
+        color: #bb2a33;
+    }
+}

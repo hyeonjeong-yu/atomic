@@ -8,9 +8,9 @@ const meta = {
         componentSubtitle: 'CheckboxGroup',
     },
     argTypes: {
-        onchange: {
-            action: 'changed'
-        }
+        options: {
+            control: 'array'
+        },
     }
 }
 
@@ -21,9 +21,11 @@ const Template = (args) => <CheckboxGroup {...args} />;
 export const Default = Template.bind({});
 Default.args = {
     options: [
-        { label: '옵션 1', value: 'option1' },
-        { label: '옵션 2', value: 'option2' },
-        { label: '옵션 3', value: 'option3' },
-        { label: '옵션 4', value: 'option4' },
+        { label: 'Option 1', value: 'Option 1' },
+        { label: 'Option 2', value: 'Option 2' },
+        { label: 'Option 3', value: 'Option 3' },
+        { label: 'Option 4', value: 'Option 4' },
     ],
+
+    onChange: (checkedItems) => console.log('Changed: ', checkedItems)
 };
