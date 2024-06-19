@@ -1,0 +1,56 @@
+$primary: #1a7aff;
+$secondary: #fe9073;
+
+.Button {
+    border-radius: 8px;
+    cursor: pointer;
+    // background-color: #ffffff;
+    // border: 1px solid #d9d9d9;
+
+    //  COLOR
+    &.primary {
+        background-color: $primary;
+        color:#ffff;
+        border: none;
+    }
+    &.secondary {
+        background-color: $secondary;
+        color: #ffff;
+        border: none;
+    }
+
+    // VARIANT
+    &.dashed {
+        background-color: #ffffff;
+        color: initial;
+        border: 1.5px dashed #d9d9d9;
+    }
+    &.disabled {
+        background-color: #f5f5f5;
+        border : 1px solid #d9d9d9;
+        color: #b8b8b8;
+    }
+    &.error {
+        background-color: #ff5151;
+        color: #ffffff;
+        border: none;
+        cursor: not-allowed;
+    }
+
+    // SIZE
+    &.small{
+        width: 200px;
+        height: 24px;
+        padding: 5px;
+    }
+    &.medium{
+        width: 300px;
+        height: 32px;
+        padding: 5px;
+    }
+    &.large{
+        width: 400px;
+        height: 40px;
+        padding: 5px;
+    }
+}
