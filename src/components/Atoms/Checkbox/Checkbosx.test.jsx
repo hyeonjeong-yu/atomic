@@ -5,6 +5,7 @@ describe('Checkbox', () => {
     // 1. Checkbox Component Rendering 확인
     it('Checkbox rendering Correctly', () =>{
         render(<Checkbox label='Check me' checked={false} />)
+        
         const checkboxElement = screen.getByTestId('checkbox');
         expect(checkboxElement).toBeInTheDocument();
         expect(checkboxElement.checked).toBeFalsy();

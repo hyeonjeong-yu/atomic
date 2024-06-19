@@ -11,14 +11,25 @@ const meta = {
         // }
     },
     argTypes: {
+        label: { control: 'text'},
+        checked: { control: 'boolean'}
     }
 }
 
 export default meta;
 
-export const Primary = {
-    args : {
-        label: 'Check me'
-    },
-    
-}
+const Template = (args) => <Checkbox {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+    label: 'Check me',
+    checked: false,
+    onChange: () => {},
+};
+
+export const Checked = Template.bind({});
+Checked.args = {
+    label: 'Check me',
+    checked: true,
+    onChange: () => {},
+};

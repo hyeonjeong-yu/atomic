@@ -4,9 +4,9 @@
 import React, { useState } from 'react'
 import Checkbox from '../../Atoms/Checkbox/Checkbox'
 
-const CheckboxGroup = () => {
+const CheckboxGroup = ({options, onChange}) => {
 
-    // const [checkboxes, setCheckBoxes] = useState
+    const [checkedItems, setCheckedItems] = useState({})
     return (
         <div>
             <Checkbox label='전체선택' />
