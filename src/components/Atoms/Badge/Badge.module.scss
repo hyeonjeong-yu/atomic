@@ -4,15 +4,15 @@
     border-radius: 8px;
     padding: 4px 8px;
 
-    &.wait {
+    &.pending {
         background-color: #c0dd78;
         color: #436f00;
     }
-    &.approve {
+    &.approved {
         background-color: #94dcf7;
         color: #0063b8;
     }
-    &.return {
+    &.rejected {
         background-color: #ffc3c9;
         color: #bb2a33;
     }

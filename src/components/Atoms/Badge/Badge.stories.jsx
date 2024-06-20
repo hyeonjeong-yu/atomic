@@ -16,20 +16,20 @@ export default meta;
 
 const Template = (args) => <Badge {...args} />;
 
-export const Wait = Template.bind({});
-Wait.args = {
-    status: '대기',
-    color: 'wait'
+export const Pending = Template.bind({});
+Pending.args = {
+    status: 'pending',
+    message: '대기',
 }
 
-export const Approve = Template.bind({});
-Approve.args = {
-    status: '승인',
-    color: 'approve'
+export const Approved = Template.bind({});
+Approved.args = {
+    status: 'approved',
+    message: '승인',
 };
 
-export const Return = Template.bind({});
-Return.args = {
-    status: '반려',
-    color: 'return'
+export const Rejected = Template.bind({});
+Rejected.args = {
+    status: 'rejected',
+    message: '반려',
 };

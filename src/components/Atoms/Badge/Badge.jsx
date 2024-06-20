@@ -4,21 +4,21 @@ import styles from './Badge.module.scss'
 
 const Badge = ({
     status,
-    color
+    message
 }) => {
     return (
         <div
-            className={`${styles.Badge} ${styles[color]}`}
+            className={`${styles.Badge} ${styles[status]}`}
         >
-            {status}
+            {message}
         </div>
     )
 }
 
 Badge.propTypes = {
     /** 상태값을 나타냅니다. */
-    status: PropTypes.string.isRequired,
-    /** 상태값에 따라 색상이 변경됩니다. */
-    color: PropTypes.string,
+    status: PropTypes.oneOf(['pending', 'approved', 'rejected']).isRequired,
+    /** 상태에 포함될 메세지입니다. */
+    message: PropTypes.oneOf(['대기', '승인', '반려'])
 };
 export default Badge
