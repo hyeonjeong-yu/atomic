@@ -1,0 +1,29 @@
+/* 폰트 세팅 */
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 400;
+    font-style: normal;
+    src: url("../../fonts/Pretendard-Regular.otf") format("pretendard");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 500;
+    font-style: normal;
+    src: url("../../fonts/Pretendard-Medium.otf") format("pretendard");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 600;
+    font-style: normal;
+    src: url("../../fonts/Pretendard-SemiBold.otf") format("pretendard");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 700;
+    font-style: normal;
+    src: url("../../fonts/Pretendard-Bold.otf") format("pretendard");
+    font-display: swap;
+}

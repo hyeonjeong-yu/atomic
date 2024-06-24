@@ -1,5 +1,5 @@
-import { useState } from "react";
 import Checkbox from "./components/Atoms/Checkbox/Checkbox";
+import Typography from "./components/Atoms/Typography/Typography";
 import CheckboxGroup from "./components/Molecules/CheckboxGroup/CheckboxGroup";
 import DropdownMenu from "./components/Organism/DropdownMenu/DropdownMenu";
 
@@ -30,7 +30,9 @@ function App() {
 
             <h3>DropdownMenu</h3>
             <DropdownMenu />
-            
+
+            <h3>Heading</h3>
+            <Typography variant='headline2'/>
         </div>
     );
 }
