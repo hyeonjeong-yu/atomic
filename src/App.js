@@ -1,6 +1,7 @@
 import Checkbox from "./components/Atoms/Checkbox/Checkbox";
 import Typography from "./components/Atoms/Typography/Typography";
 import CheckboxGroup from "./components/Molecules/CheckboxGroup/CheckboxGroup";
+import Tab from "./components/Molecules/Tab/Tab";
 import DropdownMenu from "./components/Organism/DropdownMenu/DropdownMenu";
 
 function App() {
@@ -16,6 +17,12 @@ function App() {
     const statusChange = (checkedItems) => {
         console.log('checkbox status change: ', checkedItems);
     }
+
+    const tabs = [
+        { label: 'Tab 1', content: <div>Tab 1 Content</div> },
+        { label: 'Tab 2', content: <div>Tab 2 Content</div> },
+        { label: 'Tab 3', content: <div>Tab 3 Content</div> },
+    ]
 
     return (
         <div className="App">
@@ -33,6 +40,9 @@ function App() {
 
             <h3>Heading</h3>
             <Typography variant='headline2'/>
+
+            <h3>Tab</h3>
+            <Tab tabs={tabs} />
         </div>
     );
 }
