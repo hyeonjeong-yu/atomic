@@ -1,7 +1,7 @@
-import Button from "./components/Atoms/Button/Button";
-import Icon from "./components/Atoms/Icon/Icon";
+import { useState } from "react";
 import Checkbox from "./components/Atoms/Checkbox/Checkbox";
 import CheckboxGroup from "./components/Molecules/CheckboxGroup/CheckboxGroup";
+import DropdownMenu from "./components/Organism/DropdownMenu/DropdownMenu";
 
 function App() {
 
@@ -16,6 +16,7 @@ function App() {
     const statusChange = (checkedItems) => {
         console.log('checkbox status change: ', checkedItems);
     }
+
     return (
         <div className="App">
             <h3>Checkbox</h3>
@@ -26,6 +27,10 @@ function App() {
                 options={options}
                 onChange={statusChange}
             />
+
+            <h3>DropdownMenu</h3>
+            <DropdownMenu />
+            
         </div>
     );
 }

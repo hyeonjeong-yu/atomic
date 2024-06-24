@@ -14,12 +14,13 @@ const Button = ({
     size= 'medium',
     label,
     children,
-    onClick = () => {},
+    onClick
 }) => {
     return (
         <button
             type={type}
             className={`${styles.Button} ${styles[color]} ${styles[variant]} ${styles[size]}`}
+            onClick={onClick}
         >
             {label}
             {children}
@@ -29,14 +30,14 @@ const Button = ({
 
 // props의 타입 지정 (문자열, 필수)
 Button.propTypes = {
-    type: PropTypes.oneOf(buttonType),
+    type: PropTypes.oneOf(buttonType).isRequired,
     color: PropTypes.oneOf(colorType),
     variant: PropTypes.oneOf(variantType),
     size: PropTypes.oneOf(['small', 'medium', 'large']),
-    label: PropTypes.string.isRequired,
-    children: PropTypes.node
+    label: PropTypes.string,
     // 자식 요소를 받을 수 있음 ex)icon
-    // onClick: PropTypes.func,
+    children: PropTypes.node,
+    onClick: PropTypes.func
 }
 
 export default Button
