@@ -96,7 +96,7 @@ function App() {
 
             <Icon name='notice' />
 
-            <CardList cards={notices}/>
+            <CardList title='공지사항' showRightIcon={true} items={notices}/>
 
         </div>
     );

@@ -23,21 +23,20 @@ const Icon = ({
     }
     const IconComponent = iconList[name];
 
-    // 오류 처리
     if(!IconComponent) {
         console.error(`Icon ${iconType} not found`);
         return false;
     }
 
     return (
-        // <IconComponent data-testid='icon' className={`${styles[color]}`}/>
+        <IconComponent data-testid='icon' className={`${styles[color]}`}/>
         // <IconComponent data-testid='icon' style={{fill: color}}/>
-        <IconComponent />
+        // <IconComponent />
     )
 }
 
 Icon.propTypes = {
-    iconType: PropTypes.oneOf(['Exit', 'Heart', 'Pencil']).isRequired,
+    iconType: PropTypes.oneOf(['Exit', 'Heart', 'Pencil']),
     color: PropTypes.string
 }
 

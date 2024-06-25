@@ -3,19 +3,19 @@ import styles from './CardList.module.scss'
 import CardHeader from '../../Molecules/CardHeader/CardHeader'
 import CardItem from '../../Molecules/CardItem/CardItem'
 
-const CardList = ({ cards }) => {
+const CardList = ({ title, showRightIcon, items }) => {
 
-    if(!cards) {
-        console.error(`cards ${cards} not found`);
+    if(!items) {
+        console.error(`cards ${items} not found`);
         return false;
     }
 
     return (
         <div className={`${styles.CardList}`}>
-            <CardHeader />
+            <CardHeader title={title} showRightIcon={showRightIcon}/>
             <div>
                 {
-                    cards.map((card, index) => (
+                    items.map((card, index) => (
                         <CardItem key={index} title={card.title} date={card.date} />
                     ))
                 }

@@ -3,14 +3,16 @@ import Icon from '../../Atoms/Icon/Icon'
 import Text from '../../Atoms/Text/Text'
 import styles from './CardHeader.module.scss'
 
-const CardHeader = () => {
+const CardHeader = ({ title, showRightIcon }) => {
     return (
         <div className={`${styles.CardHeader}`}>
             <div>
                 <Icon name='notice' />
-                <Text>공지사항</Text>
+                <Text>{title}</Text>
             </div>
-            <Icon name='arrow' />
+            {
+                showRightIcon && <Icon name='arrow' />
+            }
         </div>
     )
 }

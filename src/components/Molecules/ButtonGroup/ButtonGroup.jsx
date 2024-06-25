@@ -1,11 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import Button from '../../Atoms/Button/Button';
-import styles from './ButtonGroup.module.scss';
 
 const ButtonGroup = ({buttons}) => {
     return (
-        <div className={`${styles.ButtonGroup}`}>
+        <div>
             {
                 buttons.map((button, index) => (
                     <Button key={index} {...button} />

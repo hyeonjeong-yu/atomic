@@ -20,24 +20,22 @@ const Table = ({
                 { headerGroups.map(headerGroup => (
                     <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
                         {headerGroup.headers.map(column => (
-                            <TableCell key={column.id}
-                                    value={column.render('Header')}
-                                    isHeader={true}
-                            />
+                            <TableCell key={column.id} isHeader={true}>
+                                {column.render('Header')}
+                            </TableCell>
                         ))}
                     </tr>
                 ))}
             </thead>
-            <tbody {...getTableBodyProps}>
+            <tbody {...getTableBodyProps()}>
                 { rows.map(row => {
                     prepareRow(row);
                     return (
                         <tr {...row.getRowProps()} key={row.id}>
                             { row.cells.map(cell => (
-                                <TableCell key={cell.id}
-                                        value={cell.render('Cell')}
-                                        isHeader={false}
-                                />
+                                <TableCell key={cell.id} isHeader={false}>
+                                    {cell.render('Cell')}
+                                </TableCell>
                             ))}
                         </tr>
                     )
