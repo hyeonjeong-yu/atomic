@@ -1,21 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './Text.module.scss';
+import styles from './Text.module.scss'
 
-const Text = ({
-    text,
-    color
-}) => {
+const Text = ({variant, children}) => {
     return (
-        <span className={`${styles.Text} ${styles[color]}`}>
-            {text}
-        </span>
+        <span className={`${styles.Text} ${styles[variant]}`}>{children}</span>
     )
 }
 
 Text.propTypes = {
-    text: PropTypes.string.isRequired,
-    color: PropTypes.oneOf(['default', 'primary', 'white']),
+    variant: PropTypes.string,
 }
-
 export default Text

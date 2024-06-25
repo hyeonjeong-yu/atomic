@@ -1,14 +1,14 @@
 import React from 'react'
 
 const TableCell = ({
-    value,
+    children,
     isHeader
 }) => {
     const Tag = isHeader? 'th' : 'td';
 
     return (
         <Tag>
-            {value}
+            {children}
         </Tag>
     )
 }

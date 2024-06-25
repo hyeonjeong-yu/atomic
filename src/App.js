@@ -1,5 +1,5 @@
 import Checkbox from "./components/Atoms/Checkbox/Checkbox";
-import Typography from "./components/Atoms/Typography/Typography";
+import Text from "./components/Atoms/Text/Text";
 import CheckboxGroup from "./components/Molecules/CheckboxGroup/CheckboxGroup";
 import Tab from "./components/Molecules/Tab/Tab";
 import DropdownMenu from "./components/Organism/DropdownMenu/DropdownMenu";
@@ -7,6 +7,8 @@ import ButtonGroup from "./components/Molecules/ButtonGroup/ButtonGroup";
 import { buttons } from "./components/Molecules/ButtonGroup/data";
 import React, { useMemo } from 'react';
 import Table from "./components/Molecules/Table/Table";
+import Icon from "./components/Atoms/Icon/Icon";
+import CardList from "./components/Organism/CardList/CardList";
 
 function App() {
 
@@ -45,21 +47,26 @@ function App() {
     
     const data = useMemo( () => [
         {
-        name: 'John Doe',
-        age: 28,
-        country: 'USA',
+            name: 'John Doe',
+            age: 28,
+            country: 'USA',
         },
         {
-        name: 'Jane Smith',
-        age: 22,
-        country: 'Canada',
+            name: 'Jane Smith',
+            age: 22,
+            country: 'Canada',
         },
         {
-        name: 'George Brown',
-        age: 35,
-        country: 'UK',
+            name: 'George Brown',
+            age: 35,
+            country: 'UK',
         }],[]
     );
+
+    const notices = [
+        {title: '공지사항 1', date: '2024-06-01'},
+        {title: '공지사항 2', date: '2024-06-02'},
+    ]
 
     return (
         <div className="App">
@@ -76,7 +83,7 @@ function App() {
             <DropdownMenu />
 
             <h3>Heading</h3>
-            <Typography variant='headline2'/>
+            <Text variant='headline2' children='Notice' />
 
             <h3>Tab</h3>
             <Tab tabs={tabs} />
@@ -86,6 +93,10 @@ function App() {
 
             <h3>Table</h3>
             <Table columns={columns} data={data} />
+
+            <Icon name='notice' />
+
+            <CardList cards={notices}/>
 
         </div>
     );
