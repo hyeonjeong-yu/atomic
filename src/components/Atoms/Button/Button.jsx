@@ -16,6 +16,7 @@ const Button = ({
     label,
     children,
     icon: Icon,
+    iconSrc,
     disabled,
     onClick
 }) => {
@@ -31,9 +32,12 @@ const Button = ({
             onClick = {onClick}
         >   
             { Icon && (
-                <IconContext.Provider value={{ className: 'react-icons '}}>
+                <IconContext.Provider value = {{ className: 'react-icons'}}>
                     <Icon />
                 </IconContext.Provider>
+            )}
+            { iconSrc && (
+                <img src={iconSrc} className='svg-icons'/>
             )}
             {label || children}
         </button>
@@ -48,7 +52,8 @@ Button.propTypes = {
     size: PropTypes.oneOf(['small', 'medium', 'large']),
     label: PropTypes.string, 
     children: PropTypes.node, 
-    icon: PropTypes.object, 
+    icon: PropTypes.object,
+    iconSrc: PropTypes.string,
     disabled: PropTypes.bool,
     onClick: PropTypes.func
 }

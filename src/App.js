@@ -4,8 +4,23 @@ import Typography from "./components/Atoms/Typography/Typography";
 import CheckboxGroup from "./components/Molecules/CheckboxGroup/CheckboxGroup";
 import Tab from "./components/Molecules/Tab/Tab";
 import DropdownMenu from "./components/Organism/DropdownMenu/DropdownMenu";
-import { AiFillPieChart } from "react-icons/ai";
-import { FaCar } from 'react-icons/fa';
+
+//icon
+import { RiCarFill } from "react-icons/ri";
+import { RiEBike2Fill } from "react-icons/ri";
+import { RiWalkFill } from "react-icons/ri";
+import { MdPedalBike } from "react-icons/md";
+import { RiTruckFill } from "react-icons/ri";
+import { RiRecycleFill } from "react-icons/ri";
+import { MdAirportShuttle } from "react-icons/md";
+import { RiBusFill } from "react-icons/ri";
+import { RiPlaneFill } from "react-icons/ri";
+import { RiShipFill } from "react-icons/ri";
+import { MdLocalTaxi } from "react-icons/md";
+import { MdElectricScooter } from "react-icons/md";
+import excavatorIcon from '../src/assets/svg/mdi-Excavator.svg';
+import petIcon from '../src/assets/svg/material-Pet.svg';
+
 
 function App() {
 
@@ -30,12 +45,20 @@ function App() {
     return (
         <div className="App">
             <h3>Button</h3>
-            <Button type='button' label='Button' icon={AiFillPieChart}>
-                
-            </Button>
-            <Button icon={FaCar}>
-
-            </Button>
+            <Button type='button' label='Button' icon={RiCarFill}></Button>
+            <Button icon={RiEBike2Fill}></Button>
+            <Button icon={RiWalkFill}></Button>
+            <Button icon={MdPedalBike}></Button>
+            <Button icon={RiTruckFill}></Button>
+            <Button icon={RiRecycleFill}></Button>
+            <Button icon={MdAirportShuttle}></Button>
+            <Button icon={RiBusFill}></Button>
+            <Button icon={RiPlaneFill}></Button>
+            <Button icon={RiShipFill}></Button>
+            <Button icon={MdLocalTaxi}></Button>
+            <Button icon={MdElectricScooter}></Button>
+            <Button iconSrc={excavatorIcon}></Button>
+            <Button iconSrc={petIcon}></Button>
 
             <h3>Checkbox</h3>
             <Checkbox label='option1' checked={true}/>
