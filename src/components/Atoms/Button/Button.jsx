@@ -12,7 +12,7 @@ const Button = ({
     type,
     color,
     variant = 'default',
-    size= 'medium',
+    size = 'medium',
     label,
     children,
     icon: Icon,
@@ -37,7 +37,7 @@ const Button = ({
                 </IconContext.Provider>
             )}
             { iconSrc && (
-                <img src={iconSrc} className='svg-icons'/>
+                <img src={iconSrc}/>
             )}
             {label || children}
         </button>

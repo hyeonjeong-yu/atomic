@@ -4,8 +4,15 @@ $secondary: #fe9073;
 .Button {
     border-radius: 8px;
     cursor: pointer;
-    // background-color: #ffffff;
-    // border: 1px solid #d9d9d9;
+    
+    img {
+        width: 20px;
+        height: 20px;
+    }
+    svg {
+        width: 20px;
+        height: 20px;
+    }
 
     //  COLOR
     &.primary {
@@ -39,8 +46,8 @@ $secondary: #fe9073;
 
     // SIZE
     &.small{
-        width: 200px;
-        height: 24px;
+        width: 60px;
+        height: 60px;
         padding: 5px;
     }
     &.medium{
@@ -52,10 +59,5 @@ $secondary: #fe9073;
         width: 400px;
         height: 40px;
         padding: 5px;
-    }
-
-    &.svg-icons {
-        width: 16px;
-        height: 16px;
     }
 }
