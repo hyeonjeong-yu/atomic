@@ -5,6 +5,9 @@ import Tab from "./components/Molecules/Tab/Tab";
 import DropdownMenu from "./components/Organism/DropdownMenu/DropdownMenu";
 import ButtonGroup from "./components/Molecules/ButtonGroup/ButtonGroup";
 import { buttons } from "./components/Molecules/ButtonGroup/data";
+import React, { useMemo } from 'react';
+import Table from "./components/Molecules/Table/Table";
+
 function App() {
 
     const options = [
@@ -24,6 +27,39 @@ function App() {
         { label: 'Tab 2', content: <div>Tab 2 Content</div> },
         { label: 'Tab 3', content: <div>Tab 3 Content</div> },
     ]
+
+    const columns = useMemo( () => [
+        {
+            Header: 'Name',
+            accessor: 'name',
+        },
+        {
+            Header: 'Age',
+            accessor: 'age',
+        },
+        {
+            Header: 'Country',
+            accessor: 'country',
+        }],[]
+    );
+    
+    const data = useMemo( () => [
+        {
+        name: 'John Doe',
+        age: 28,
+        country: 'USA',
+        },
+        {
+        name: 'Jane Smith',
+        age: 22,
+        country: 'Canada',
+        },
+        {
+        name: 'George Brown',
+        age: 35,
+        country: 'UK',
+        }],[]
+    );
 
     return (
         <div className="App">
@@ -47,6 +83,10 @@ function App() {
 
             <h3>ButtonGroup</h3>
             <ButtonGroup buttons={buttons} />
+
+            <h3>Table</h3>
+            <Table columns={columns} data={data} />
+
         </div>
     );
 }
