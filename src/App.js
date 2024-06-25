@@ -1,8 +1,11 @@
+import Button from "./components/Atoms/Button/Button";
 import Checkbox from "./components/Atoms/Checkbox/Checkbox";
 import Typography from "./components/Atoms/Typography/Typography";
 import CheckboxGroup from "./components/Molecules/CheckboxGroup/CheckboxGroup";
 import Tab from "./components/Molecules/Tab/Tab";
 import DropdownMenu from "./components/Organism/DropdownMenu/DropdownMenu";
+import { AiFillPieChart } from "react-icons/ai";
+import { FaCar } from 'react-icons/fa';
 
 function App() {
 
@@ -26,6 +29,14 @@ function App() {
 
     return (
         <div className="App">
+            <h3>Button</h3>
+            <Button type='button' label='Button' icon={AiFillPieChart}>
+                
+            </Button>
+            <Button icon={FaCar}>
+
+            </Button>
+
             <h3>Checkbox</h3>
             <Checkbox label='option1' checked={true}/>
 

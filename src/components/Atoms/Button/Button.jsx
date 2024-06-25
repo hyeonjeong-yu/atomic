@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Button.module.scss'
+import { IconContext } from 'react-icons';
 
 const buttonType = ['submit', 'button'];
 const colorType = ['primary', 'secondary'];
@@ -14,16 +15,27 @@ const Button = ({
     size= 'medium',
     label,
     children,
+    icon: Icon,
+    disabled,
     onClick
 }) => {
     return (
         <button
-            type={type}
-            className={`${styles.Button} ${styles[color]} ${styles[variant]} ${styles[size]}`}
-            onClick={onClick}
-        >
-            {label}
-            {children}
+            type = {type}
+            className = {`${styles.Button}
+                        ${styles[color]}
+                        ${styles[variant]}
+                        ${styles[size]}
+                        ${disabled ? 'disabled' : ''}
+                        `}
+            onClick = {onClick}
+        >   
+            { Icon && (
+                <IconContext.Provider value={{ className: 'react-icons '}}>
+                    <Icon />
+                </IconContext.Provider>
+            )}
+            {label || children}
         </button>
     )
 }
@@ -34,9 +46,10 @@ Button.propTypes = {
     color: PropTypes.oneOf(colorType),
     variant: PropTypes.oneOf(variantType),
     size: PropTypes.oneOf(['small', 'medium', 'large']),
-    label: PropTypes.string,
-    // 자식 요소를 받을 수 있음 ex)icon
-    children: PropTypes.node,
+    label: PropTypes.string, 
+    children: PropTypes.node, 
+    icon: PropTypes.object, 
+    disabled: PropTypes.bool,
     onClick: PropTypes.func
 }
 

@@ -28,22 +28,3 @@ Secondary.args = {
     label: 'Button TEST'
 
 }
-
-
-/*
-export const Primary = {
-    args: {
-        backgroundColor: '',
-        color: 'primary',
-        variant: 'default',
-        size: 'medium',
-        label: 'Button TEST'
-    }
-}
-export const Secondary = {
-    args: {
-        color: 'secondary',
-        variant: 'default'
-    }
-}
-*/
