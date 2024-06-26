@@ -15,8 +15,8 @@ const CardList = ({ title, showRightIcon, items }) => {
             <CardHeader title={title} showRightIcon={showRightIcon}/>
             <div>
                 {
-                    items.map((card, index) => (
-                        <CardItem key={index} title={card.title} date={card.date} />
+                    items.map((item, index) => (
+                        <CardItem key={index} title={item.title} date={item.date} />
                     ))
                 }
             </div>

@@ -9,6 +9,8 @@ import React, { useMemo } from 'react';
 import Table from "./components/Molecules/Table/Table";
 import Icon from "./components/Atoms/Icon/Icon";
 import CardList from "./components/Organism/CardList/CardList";
+import Chart from "./components/Molecules/Charts/Chart";
+import BarChart from "./components/Molecules/Charts/BarChart";
 
 function App() {
 
@@ -68,6 +70,20 @@ function App() {
         {title: '공지사항 2', date: '2024-06-02'},
     ]
 
+    const chartData = [
+        // name: X축의 dataKey가 됨
+        { name: '2024-06-01', uv: 4000, pv: 2400, amt: 2400 },
+        { name: '2024-06-02', uv: 3000, pv: 1398, amt: 2210 },
+        { name: '2024-06-03', uv: 2000, pv: 9800, amt: 2290 },
+        { name: '2024-06-04', uv: 2780, pv: 3908, amt: 2000 },
+        { name: '2024-06-05', uv: 1890, pv: 4800, amt: 2181 },
+        { name: '2024-06-06', uv: 2390, pv: 3800, amt: 2500 },
+        { name: '2024-06-07', uv: 3490, pv: 4300, amt: 2100 },
+        { name: '2024-06-08', uv: 3490, pv: 4300, amt: 2100 },
+        { name: '2024-06-09', uv: 3490, pv: 4300, amt: 2100 },
+        { name: '2024-06-10', uv: 3490, pv: 4300, amt: 2100 },
+      ];
+
     return (
         <div className="App">
             <h3>Checkbox</h3>
@@ -98,6 +114,9 @@ function App() {
 
             <CardList title='공지사항' showRightIcon={true} items={notices}/>
 
+            <h3>Charts</h3>
+            <Chart data={chartData} />
+            <BarChart data={chartData} />
         </div>
     );
 }

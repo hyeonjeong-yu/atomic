@@ -24,21 +24,19 @@ const Icon = ({
     const IconComponent = iconList[name];
 
     if(!IconComponent) {
-        console.error(`Icon ${iconType} not found`);
+        console.error(`Icon not found`);
         return false;
     }
 
     return (
         <IconComponent data-testid='icon' className={`${styles[color]}`}/>
-        // <IconComponent data-testid='icon' style={{fill: color}}/>
-        // <IconComponent />
     )
 }
 
-Icon.propTypes = {
-    iconType: PropTypes.oneOf(['Exit', 'Heart', 'Pencil']),
-    color: PropTypes.string
-}
+// Icon.propTypes = {
+//     iconType: PropTypes.oneOf(['Exit', 'Heart', 'Pencil']),
+//     color: PropTypes.string
+// }
 
 export default Icon
 
