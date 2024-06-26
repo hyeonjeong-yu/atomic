@@ -8,10 +8,10 @@ const CardHeader = ({ title, showRightIcon }) => {
         <div className={`${styles.CardHeader}`}>
             <div>
                 <Icon name='notice' />
-                <Text>{title}</Text>
+                <Text variant='body3-bold'>{title}</Text>
             </div>
             {
-                showRightIcon && <Icon name='arrow' />
+                showRightIcon && <Icon name='arrow' color='red'/>
             }
         </div>
     )

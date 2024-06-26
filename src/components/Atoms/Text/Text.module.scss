@@ -1,93 +1,158 @@
-.Text{
-    $font-weight: 500;
+$font-weight-normal: 500;
+$font-weight-bold: 700;
 
+@mixin fontWeight($weight) {
+    @if $weight == normal {
+        font-weight: $font-weight-normal;
+    } @else if $weight == bold {
+        font-weight: $font-weight-bold;
+    } @else {
+        font-weight: normal;
+    }
+}
+.Text{
     &.display1 {
         font-size: 112px;
-        font-weight: $font-weight;
+        @include fontWeight(normal);
     }
-
+    &.display1-bold {
+        font-size: 112px;
+        @include fontWeight(bold);
+    }
     &.display2 {
         font-size: 80px;
-        font-weight: $font-weight;
+        @include fontWeight(normal);
     }
-
+    &.display2-bold {
+        font-size: 80px;
+        @include fontWeight(bold);
+    }
     &.display3 {
         font-size: 60px;
-        font-weight: $font-weight;
+        @include fontWeight(normal);
     }
-
+    &.display3-bold {
+        font-size: 60px;
+        @include fontWeight(bold);
+    }
     &.headline1 {
         font-size: 48px;
-        font-weight: $font-weight;
+        @include fontWeight(normal);
     }
-
+    &.headline1-bold {
+        font-size: 48px;
+        @include fontWeight(bold);
+    }
     &.headline2 {
         font-size: 36px;
-        font-weight: $font-weight;
+        @include fontWeight(normal);
     }
-
+    &.headline2-bold {
+        font-size: 36px;
+        @include fontWeight(bold);
+    }
     &.headline3 {
         font-size: 28px;
-        font-weight: $font-weight;
+        @include fontWeight(normal);
     }
-
+    &.headline3-bold {
+        font-size: 28px;
+        @include fontWeight(bold);
+    }
     &.headline4 {
         font-size: 24px;
-        font-weight: $font-weight;
+        @include fontWeight(normal);
     }
-
+    &.headline4-bold {
+        font-size: 24px;
+        @include fontWeight(bold);
+    }
     &.title1 {
         font-size: 22px;
-        font-weight: $font-weight;
+        @include fontWeight(normal);
     }
-
+    &.title1-bold {
+        font-size: 22px;
+        @include fontWeight(bold);
+    }
     &.title2 {
         font-size: 16px;
-        font-weight: $font-weight;
+        @include fontWeight(normal);
     }
-
+    &.title2-bold {
+        font-size: 16px;
+        @include fontWeight(bold);
+    }
     &.title3 {
         font-size: 12px;
-        font-weight: $font-weight;
+        @include fontWeight(normal);
     }
-
+    &.title3-bold {
+        font-size: 12px;
+        @include fontWeight(bold);
+    }
     &.body1 {
         font-size: 20px;
-        font-weight: $font-weight;
+        @include fontWeight(normal);
     }
-
+    &.body1-bold {
+        font-size: 20px;
+        @include fontWeight(bold);
+    }
     &.body2 {
         font-size: 18px;
-        font-weight: $font-weight;
+        @include fontWeight(normal);
     }
-
+    &.body2-bold {
+        font-size: 18px;
+        @include fontWeight(bold);
+    }
     &.body3 {
         font-size: 16px;
-        font-weight: $font-weight;
+        @include fontWeight(normal);
     }
-
+    &.body3-bold {
+        font-size: 16px;
+        @include fontWeight(bold);
+    }
     &.body4 {
         font-size: 14px;
-        font-weight: $font-weight;
+        @include fontWeight(normal);
     }
-
+    &.body4-bold {
+        font-size: 14px;
+        @include fontWeight(bold);
+    }
     &.body5 {
         font-size: 12px;
-        font-weight: $font-weight;
+        @include fontWeight(normal);
     }
-
+    &.body5-bold {
+        font-size: 12px;
+        @include fontWeight(bold);
+    }
     &.label1 {
         font-size: 18px;
-        font-weight: $font-weight;
+        @include fontWeight(normal);
     }
-
+    &.label1-bold {
+        font-size: 18px;
+        @include fontWeight(bold);
+    }
     &.label2 {
         font-size: 16px;
-        font-weight: $font-weight;
+        @include fontWeight(normal);
     }
-
+    &.label2-bold {
+        font-size: 16px;
+        @include fontWeight(bold);
+    }
     &.label3 {
         font-size: 14px;
-        font-weight: $font-weight;
+        @include fontWeight(normal);
+    }
+    &.label3-bold {
+        font-size: 14px;
+        @include fontWeight(bold);
     }
 }

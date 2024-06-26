@@ -17,6 +17,7 @@ const Chart = ({ data }) => {
         const date = parseISO(tick);
         return date.getDate();
     }
+    
 
     return (
         <BarChart width={600} height={300} data={data}>
