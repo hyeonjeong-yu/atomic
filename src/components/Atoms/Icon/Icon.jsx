@@ -29,14 +29,15 @@ const Icon = ({
     }
 
     return (
-        <IconComponent data-testid='icon' className={`${styles[color]}`}/>
+        <IconComponent data-testid='icon' className={`${styles.Icon} ${styles[color]}`}/>
     )
 }
 
-// Icon.propTypes = {
-//     iconType: PropTypes.oneOf(['Exit', 'Heart', 'Pencil']),
-//     color: PropTypes.string
-// }
+Icon.propTypes = {
+    // iconType: PropTypes.oneOf(['Exit', 'Heart', 'Pencil']),
+    name: PropTypes.string,
+    color: PropTypes.string
+}
 
 export default Icon
 

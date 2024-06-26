@@ -7,11 +7,11 @@ const CardHeader = ({ title, showRightIcon }) => {
     return (
         <div className={`${styles.CardHeader}`}>
             <div>
-                <Icon name='notice' />
+                <Icon name='notice' color='purple' />
                 <Text variant='body3-bold'>{title}</Text>
             </div>
             {
-                showRightIcon && <Icon name='arrow' color='red'/>
+                showRightIcon && <Icon name='arrow' color='gray' />
             }
         </div>
     )

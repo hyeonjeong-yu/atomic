@@ -66,8 +66,8 @@ function App() {
     );
 
     const notices = [
-        {title: '공지사항 1', date: '2024-06-01'},
-        {title: '공지사항 2', date: '2024-06-02'},
+        {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-01'},
+        {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-02'},
     ]
 
     const chartData = [

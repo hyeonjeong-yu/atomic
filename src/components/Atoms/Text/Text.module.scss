@@ -1,32 +1,26 @@
-$font-weight-normal: 500;
-$font-weight-bold: 700;
+$font-weight: (
+    normal: 500,
+    bold: 700
+);
+$color: (
+    black: #434343,
+    gray: #8c8c8c
+);
 
-@mixin fontWeight($weight) {
-    @if $weight == normal {
-        font-weight: $font-weight-normal;
-    } @else if $weight == bold {
-        font-weight: $font-weight-bold;
-    } @else {
-        font-weight: normal;
-    }
+@mixin text-style($size, $weight, $color) {
+    font-size: $size;
+    font-weight: map-get($font-weight, $weight);
+    color: $color;
 }
 .Text{
-    &.display1 {
-        font-size: 112px;
-        @include fontWeight(normal);
-    }
-    &.display1-bold {
-        font-size: 112px;
-        @include fontWeight(bold);
-    }
-    &.display2 {
-        font-size: 80px;
-        @include fontWeight(normal);
-    }
-    &.display2-bold {
-        font-size: 80px;
-        @include fontWeight(bold);
-    }
+    &.display1 { @include text-style(112px, medium, black); }
+    &.display1-bold { @include text-style(112px, bold, black); }
+    &.display2 { @include text-style(80px, medium, black); }
+    &.display2-bold { @include text-style(80px, bold, black); }
+    &.body4 { @include text-style(14px, medium, black); }
+    &.body5 { @include text-style(12px, medium, black); }
+    // 수정필요
+    /*
     &.display3 {
         font-size: 60px;
         @include fontWeight(normal);
@@ -155,4 +149,5 @@ $font-weight-bold: 700;
         font-size: 14px;
         @include fontWeight(bold);
     }
+    */
 }

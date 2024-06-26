@@ -1,5 +1,9 @@
 .CardItem {
     display: flex;
     justify-content: space-between;
-    padding: 5px 0px;
+    padding: 8px 0px;
+    border-bottom: 1px solid #70737C14;
+}
+.CardItem:last-child {
+    border-bottom: none;
 }

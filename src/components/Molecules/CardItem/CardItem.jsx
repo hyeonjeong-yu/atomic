@@ -8,8 +8,8 @@ const CardItem = ({
 }) => {
     return (
         <div className={`${styles.CardItem}`}>
-            <Text>{title}</Text>
-            <Text>{date}</Text>
+            <Text variant='body4'>{title}</Text>
+            <Text variant='body5'>{date}</Text>
         </div>
     )
 }

@@ -1,8 +1,10 @@
 .Icon {
     
     // COLOR
-    &.red {
-        display: none;
-        fill: red;
+    &.purple {
+        fill: #540DD9;
+    }
+    &.gray {
+        fill: #BFBFBF;
     }
 }
