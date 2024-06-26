@@ -11,8 +11,10 @@ const CardSection = ({
                 sections.map((section, index) => (
                     <CardList
                         key={index}
+                        icon={section.icon}
                         title={section.title}
-                        items={section.lists}
+                        size={section.size}
+                        items={section.contents}
                     />
                 ))
             }

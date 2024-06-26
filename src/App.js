@@ -71,25 +71,49 @@ function App() {
     ]
     const sections = [
         {
+            icon: 'car',
             title: 'section 1',
-            lists: [
+            size: 'small',
+            contents: [
                 {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-03'},
                 {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-04'}
-            ]
+            ],
         },
         {
+            icon: '',
             title: 'section 2',
-            lists: [
+            size: 'small',
+            contents: [
                 {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-05'},
                 {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-06'}
-            ]
+            ],
         },
         {
+            icon: '',
             title: 'section 3',
-            lists: [
+            size: 'small',
+            contents: [
                 {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-07'},
                 {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-08'}
-            ]
+            ],
+        },
+        {
+            icon: '',
+            title: 'section 4',
+            size: 'small',
+            contents: [
+                {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-07'},
+                {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-08'}
+            ],
+        },
+        {
+            icon: '',
+            title: 'section 5',
+            size: 'medium',
+            contents: [
+                {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-07'},
+                {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-08'}
+            ],
         },
     ]
 
@@ -135,7 +159,8 @@ function App() {
 
             <Icon name='notice' />
 
-            <CardList title='공지사항' showRightIcon={true} items={notices}/>
+            <h3>List 하나만 렌더링</h3>
+            <CardList title='공지사항' size='medium' showRightIcon={true} items={notices}/>
             
             {/* <h3>Charts</h3>
             <Chart data={chartData} />

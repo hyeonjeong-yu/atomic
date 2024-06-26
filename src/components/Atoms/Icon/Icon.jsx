@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Icon.module.scss';
 import { RiMegaphoneFill } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
+import { RiCarFill } from "react-icons/ri";
 
 import { Exit, Heart, Pencil } from './svg';
 
@@ -20,6 +21,7 @@ const Icon = ({
     const iconList = {
         notice: RiMegaphoneFill,
         arrow: IoIosArrowForward,
+        car: RiCarFill,
     }
     const IconComponent = iconList[name];
 
