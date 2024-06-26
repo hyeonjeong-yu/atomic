@@ -11,6 +11,7 @@ import Icon from "./components/Atoms/Icon/Icon";
 import CardList from "./components/Organism/CardList/CardList";
 import Chart from "./components/Molecules/Charts/Chart";
 import BarChart from "./components/Molecules/Charts/BarChart";
+import CardSection from "./components/Templates/CardSection/CardSection";
 
 function App() {
 
@@ -64,10 +65,32 @@ function App() {
             country: 'UK',
         }],[]
     );
-
     const notices = [
         {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-01'},
-        {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-02'},
+        {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-02'}
+    ]
+    const sections = [
+        {
+            title: 'section 1',
+            lists: [
+                {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-03'},
+                {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-04'}
+            ]
+        },
+        {
+            title: 'section 2',
+            lists: [
+                {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-05'},
+                {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-06'}
+            ]
+        },
+        {
+            title: 'section 3',
+            lists: [
+                {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-07'},
+                {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-08'}
+            ]
+        },
     ]
 
     const chartData = [
@@ -113,10 +136,13 @@ function App() {
             <Icon name='notice' />
 
             <CardList title='공지사항' showRightIcon={true} items={notices}/>
-
-            <h3>Charts</h3>
+            
+            {/* <h3>Charts</h3>
             <Chart data={chartData} />
-            <BarChart data={chartData} />
+            <BarChart data={chartData} /> */}
+
+            <h3>Section</h3>
+            <CardSection sections={sections}/>
         </div>
     );
 }
