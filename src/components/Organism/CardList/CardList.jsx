@@ -3,8 +3,13 @@ import styles from './CardList.module.scss'
 import CardHeader from '../../Molecules/CardHeader/CardHeader'
 import CardItem from '../../Molecules/CardItem/CardItem'
 
-const CardList = ({ icon, title, size, showRightIcon, items }) => {
-
+const CardList = ({
+    icon,
+    title,
+    size,
+    showRightIcon,
+    items
+}) => {
     if(!items) {
         console.error(`cards ${items} not found`);
         return false;
@@ -12,7 +17,11 @@ const CardList = ({ icon, title, size, showRightIcon, items }) => {
 
     return (
         <div className={`${styles.CardList} ${styles[size]}`}>
-            <CardHeader icon={icon} title={title} showRightIcon={showRightIcon}/>
+            <CardHeader
+                icon={icon}
+                title={title}
+                showRightIcon={showRightIcon}
+            />
             <div>
                 {
                     items.map((item, index) => (
@@ -22,7 +31,11 @@ const CardList = ({ icon, title, size, showRightIcon, items }) => {
                             date={item.date}
                         />
                     ))
+                    // type을 prop 받아서, list>item 으로 구성할건지
+                    // 다른 ui를 구성할건지 분기 처리
+                    // header는 동일하기 때문에, 하단 영역만 변경 
                 }
+            
             </div>
         </div>
     )

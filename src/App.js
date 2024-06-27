@@ -92,6 +92,7 @@ function App() {
             icon: '',
             title: 'section 3',
             size: 'small',
+            showRightIcon: true,
             contents: [
                 {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-07'},
                 {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-08'}
@@ -101,6 +102,7 @@ function App() {
             icon: '',
             title: 'section 4',
             size: 'small',
+            showRightIcon: true,
             contents: [
                 {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-07'},
                 {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-08'}

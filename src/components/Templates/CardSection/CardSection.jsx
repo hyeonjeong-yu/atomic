@@ -14,6 +14,7 @@ const CardSection = ({
                         icon={section.icon}
                         title={section.title}
                         size={section.size}
+                        showRightIcon={section.showRightIcon}
                         items={section.contents}
                     />
                 ))

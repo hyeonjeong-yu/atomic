@@ -17,7 +17,7 @@ const Icon = ({
     // svg파일로 저장해놓은 것
     // const IconComponent = iconComponents[iconType];
 
-    // react-icons prop으로 받은 것
+    // react-icons prop으로 받은 이름
     const iconList = {
         notice: RiMegaphoneFill,
         arrow: IoIosArrowForward,
