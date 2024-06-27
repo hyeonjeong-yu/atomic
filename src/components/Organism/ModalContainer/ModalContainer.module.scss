@@ -1,0 +1,32 @@
+.ModalContainer {
+    width: 800px;
+    max-width: 100%;
+    height: 366px;
+    padding: 24px;
+    background-color: #ffff;
+    // box-shadow: 0 0 10px #00000014;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    z-index: 10000;
+    transition: width 0.3s ease, max-width 0.3s ease;
+
+    @media (max-width: 1200px) {
+        width: 720px;
+        max-width: 90%;
+    }
+    @media (max-width: 640px) {
+        width: 600px;
+        max-width: 75%;
+    }
+    @media (max-width: 375px) {
+        // width: 200px;
+        // max-width: 100%;
+    }
+}

@@ -5,13 +5,14 @@ import Tab from "./components/Molecules/Tab/Tab";
 import DropdownMenu from "./components/Organism/DropdownMenu/DropdownMenu";
 import ButtonGroup from "./components/Molecules/ButtonGroup/ButtonGroup";
 import { buttons } from "./components/Molecules/ButtonGroup/data";
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import Table from "./components/Molecules/Table/Table";
 import Icon from "./components/Atoms/Icon/Icon";
 import CardList from "./components/Organism/CardList/CardList";
 import Chart from "./components/Molecules/Charts/Chart";
 import BarChart from "./components/Molecules/Charts/BarChart";
 import CardSection from "./components/Templates/CardSection/CardSection";
+import Modal from "./components/Templates/Modal/Modal";
 
 function App() {
 
@@ -133,6 +134,18 @@ function App() {
         { name: '2024-06-10', uv: 3490, pv: 4300, amt: 2100 },
       ];
 
+      // modal 열림 상태
+      const [isModalOpen, setIsModalOpen] = useState(false);
+
+      // modal open
+      const handleOpenModal = () => {
+        setIsModalOpen(true);
+      }
+      // modal close
+      const handleCloseModal = () => {
+        setIsModalOpen(false);
+      }
+
     return (
         <div className="App">
             <h3>Checkbox</h3>
@@ -159,10 +172,15 @@ function App() {
             <h3>Table</h3>
             <Table columns={columns} data={data} />
 
-            <Icon name='notice' />
+            <Icon name='notice' onClick={handleOpenModal} />
 
             <h3>List 하나만 렌더링</h3>
-            <CardList title='공지사항' size='medium' showRightIcon={true} items={notices}/>
+            <CardList
+                title='공지사항'
+                size='medium'
+                showRightIcon={true}
+                items={notices}
+            />
             
             {/* <h3>Charts</h3>
             <Chart data={chartData} />
@@ -170,6 +188,18 @@ function App() {
 
             <h3>Section</h3>
             <CardSection sections={sections}/>
+
+            {
+                isModalOpen && (
+                    <Modal
+                        type='default'
+                        title='modalheader title'
+                        subtitle='modalheader subtitle'
+                        contents='modalbody contents'
+                        onClose={handleCloseModal}
+                    />
+                )
+            }
         </div>
     );
 }

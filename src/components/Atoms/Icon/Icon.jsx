@@ -12,7 +12,8 @@ const iconComponents = { Exit, Heart, Pencil };
 const Icon = ({
     iconType,
     color,
-    name
+    name,
+    onClick
 }) => {
     // svg파일로 저장해놓은 것
     // const IconComponent = iconComponents[iconType];
@@ -31,7 +32,11 @@ const Icon = ({
     }
 
     return (
-        <IconComponent data-testid='icon' className={`${styles.Icon} ${styles[color]}`}/>
+        <IconComponent
+            data-testid='icon'
+            className={`${styles.Icon} ${styles[color]}`}
+            onClick={onClick}
+        />
     )
 }
 

@@ -43,8 +43,18 @@ $secondary: #fe9073;
         border: none;
         cursor: not-allowed;
     }
+    &.hide {
+        background-color: #ffff;
+        border-radius: none;
+        border: none;
+    }
 
     // SIZE
+    &.toosmall{
+        width: 20px;
+        height: 20px;
+        
+    }
     &.small{
         width: 60px;
         height: 60px;
