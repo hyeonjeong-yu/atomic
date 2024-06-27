@@ -8,8 +8,10 @@ const CardList = ({
     title,
     size,
     showRightIcon,
-    items
+    items,
+    onItemClick
 }) => {
+
     if(!items) {
         console.error(`cards ${items} not found`);
         return false;
@@ -29,6 +31,7 @@ const CardList = ({
                             key={index}
                             title={item.title}
                             date={item.date}
+                            onClick={onItemClick}
                         />
                     ))
                     // type을 prop 받아서, list>item 으로 구성할건지

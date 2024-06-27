@@ -134,11 +134,14 @@ function App() {
         { name: '2024-06-10', uv: 3490, pv: 4300, amt: 2100 },
       ];
 
-      // modal 열림 상태
+      // modal open status
       const [isModalOpen, setIsModalOpen] = useState(false);
+      // modal content
+      const [activeModalContent, setActiveModalContent] = useState(null);
 
-      // modal open
-      const handleOpenModal = () => {
+      // modal open & modal content update
+      const handleCardItemClick = (item) => {
+        setActiveModalContent(item)
         setIsModalOpen(true);
       }
       // modal close
@@ -172,7 +175,7 @@ function App() {
             <h3>Table</h3>
             <Table columns={columns} data={data} />
 
-            <Icon name='notice' onClick={handleOpenModal} />
+            <Icon name='notice' />
 
             <h3>List 하나만 렌더링</h3>
             <CardList
@@ -187,15 +190,15 @@ function App() {
             <BarChart data={chartData} /> */}
 
             <h3>Section</h3>
-            <CardSection sections={sections}/>
+            <CardSection sections={sections} onCardItemClick={handleCardItemClick}/>
 
             {
-                isModalOpen && (
+                isModalOpen && activeModalContent && (
                     <Modal
-                        type='default'
+                        modalType='default'
                         title='modalheader title'
                         subtitle='modalheader subtitle'
-                        contents='modalbody contents'
+                        contents={activeModalContent.date}
                         onClose={handleCloseModal}
                     />
                 )

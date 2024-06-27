@@ -5,7 +5,8 @@ import { IconContext } from 'react-icons';
 
 const buttonType = ['submit', 'button'];
 const colorType = ['primary', 'secondary'];
-const variantType = ['default', 'dashed', 'disabled', 'error'];
+const variantType = ['default', 'dashed', 'disabled', 'error', 'hide'];
+const sizeType = ['toosmall', 'small', 'medium', 'large'];
 
 const Button = ({
     //initialize
@@ -49,7 +50,7 @@ Button.propTypes = {
     type: PropTypes.oneOf(buttonType).isRequired,
     color: PropTypes.oneOf(colorType),
     variant: PropTypes.oneOf(variantType),
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    size: PropTypes.oneOf(sizeType),
     label: PropTypes.string, 
     children: PropTypes.node, 
     icon: PropTypes.object,

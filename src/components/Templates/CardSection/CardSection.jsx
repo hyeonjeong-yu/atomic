@@ -3,7 +3,8 @@ import CardList from '../../Organism/CardList/CardList'
 import styles from './CardSection.module.scss'
 
 const CardSection = ({
-    sections
+    sections,
+    onCardItemClick
 }) => {
     return (
         <div className={`${styles.CardSection}`}>
@@ -16,6 +17,7 @@ const CardSection = ({
                         size={section.size}
                         showRightIcon={section.showRightIcon}
                         items={section.contents}
+                        onItemClick={onCardItemClick}
                     />
                 ))
             }

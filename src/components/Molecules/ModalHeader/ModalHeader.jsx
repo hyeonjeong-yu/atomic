@@ -17,7 +17,13 @@ const ModalHeader = ({
         <div className={`${styles.ModalHeader}`}>
             <div>
                 <Text>{title}</Text>
-                <Button icon={RiCloseFill} variant='hide' size='toosmall' onClick={onClose} />
+                <Button
+                    type='button'
+                    icon={RiCloseFill} 
+                    variant='hide' 
+                    size='toosmall' 
+                    onClick={onClose}
+                />
             </div>
             <Text>{subtitle}</Text>
         </div>

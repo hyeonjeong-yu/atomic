@@ -5,23 +5,21 @@ import ModalBody from '../../Molecules/ModalBody/ModalBody'
 import ModalFooter from '../../Molecules/ModalFooter/ModalFooter'
 
 const ModalContainer = ({
-    type, //default, confirm
+    modalType,
     title,
     subtitle,
-    contents,
     onClose,
-    onCancel,
-    onConfirm
+    contents,
 }) => {
     return (
         <div className={`${styles.ModalContainer}`}>
-            <ModalHeader title={title} subtitle={subtitle} onClose={onClose} />
-            { contents
-                && <ModalBody contents={contents} />
-            }
-            { type === 'confirm'
-                && <ModalFooter onCancel={onCancel} onConfirm={onConfirm}/>
-            }
+            <ModalHeader
+                title={title}
+                subtitle={subtitle}
+                onClose={onClose}
+            />
+            { modalType === 'default' && contents && <ModalBody contents={contents} /> }
+            { modalType === 'confirm' && <ModalFooter onClose={onClose}/> }
         </div>
     )
 }
