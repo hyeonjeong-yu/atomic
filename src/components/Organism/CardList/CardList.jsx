@@ -29,8 +29,10 @@ const CardList = ({
                     items.map((item, index) => (
                         <CardItem
                             key={index}
+                            headerTitle={title}
                             title={item.title}
                             date={item.date}
+                            details={item.details}
                             onClick={onItemClick}
                         />
                     ))

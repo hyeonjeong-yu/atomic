@@ -7,7 +7,7 @@ import ModalFooter from '../../Molecules/ModalFooter/ModalFooter'
 const ModalContainer = ({
     modalType,
     title,
-    subtitle,
+    description,
     onClose,
     contents,
 }) => {
@@ -15,7 +15,7 @@ const ModalContainer = ({
         <div className={`${styles.ModalContainer}`}>
             <ModalHeader
                 title={title}
-                subtitle={subtitle}
+                description={description}
                 onClose={onClose}
             />
             { modalType === 'default' && contents && <ModalBody contents={contents} /> }

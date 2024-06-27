@@ -15,141 +15,31 @@ $color: (
 .Text{
     cursor: default;
     
-    &.display1 { @include text-style(112px, medium, black); }
+    &.display1 { @include text-style(112px, normal, black); }
     &.display1-bold { @include text-style(112px, bold, black); }
-    &.display2 { @include text-style(80px, medium, black); }
+    &.display2 { @include text-style(80px, normal, black); }
     &.display2-bold { @include text-style(80px, bold, black); }
-    &.body4 { @include text-style(14px, medium, black); }
-    &.body5 { @include text-style(12px, medium, black); }
-    // 수정필요
-    /*
-    &.display3 {
-        font-size: 60px;
-        @include fontWeight(normal);
-    }
-    &.display3-bold {
-        font-size: 60px;
-        @include fontWeight(bold);
-    }
-    &.headline1 {
-        font-size: 48px;
-        @include fontWeight(normal);
-    }
-    &.headline1-bold {
-        font-size: 48px;
-        @include fontWeight(bold);
-    }
-    &.headline2 {
-        font-size: 36px;
-        @include fontWeight(normal);
-    }
-    &.headline2-bold {
-        font-size: 36px;
-        @include fontWeight(bold);
-    }
-    &.headline3 {
-        font-size: 28px;
-        @include fontWeight(normal);
-    }
-    &.headline3-bold {
-        font-size: 28px;
-        @include fontWeight(bold);
-    }
-    &.headline4 {
-        font-size: 24px;
-        @include fontWeight(normal);
-    }
-    &.headline4-bold {
-        font-size: 24px;
-        @include fontWeight(bold);
-    }
-    &.title1 {
-        font-size: 22px;
-        @include fontWeight(normal);
-    }
-    &.title1-bold {
-        font-size: 22px;
-        @include fontWeight(bold);
-    }
-    &.title2 {
-        font-size: 16px;
-        @include fontWeight(normal);
-    }
-    &.title2-bold {
-        font-size: 16px;
-        @include fontWeight(bold);
-    }
-    &.title3 {
-        font-size: 12px;
-        @include fontWeight(normal);
-    }
-    &.title3-bold {
-        font-size: 12px;
-        @include fontWeight(bold);
-    }
-    &.body1 {
-        font-size: 20px;
-        @include fontWeight(normal);
-    }
-    &.body1-bold {
-        font-size: 20px;
-        @include fontWeight(bold);
-    }
-    &.body2 {
-        font-size: 18px;
-        @include fontWeight(normal);
-    }
-    &.body2-bold {
-        font-size: 18px;
-        @include fontWeight(bold);
-    }
-    &.body3 {
-        font-size: 16px;
-        @include fontWeight(normal);
-    }
-    &.body3-bold {
-        font-size: 16px;
-        @include fontWeight(bold);
-    }
-    &.body4 {
-        font-size: 14px;
-        @include fontWeight(normal);
-    }
-    &.body4-bold {
-        font-size: 14px;
-        @include fontWeight(bold);
-    }
-    &.body5 {
-        font-size: 12px;
-        @include fontWeight(normal);
-    }
-    &.body5-bold {
-        font-size: 12px;
-        @include fontWeight(bold);
-    }
-    &.label1 {
-        font-size: 18px;
-        @include fontWeight(normal);
-    }
-    &.label1-bold {
-        font-size: 18px;
-        @include fontWeight(bold);
-    }
-    &.label2 {
-        font-size: 16px;
-        @include fontWeight(normal);
-    }
-    &.label2-bold {
-        font-size: 16px;
-        @include fontWeight(bold);
-    }
-    &.label3 {
-        font-size: 14px;
-        @include fontWeight(normal);
-    }
-    &.label3-bold {
-        font-size: 14px;
-        @include fontWeight(bold);
-    }
-    */
+    &.display3 { @include text-style(60px, normal, black); }
+    &.display3-bold { @include text-style(60px, bold, black); }
+    &.headline1 { @include text-style(48px, normal, black); }
+    &.headline1-bold { @include text-style(48px, bold, black); }
+    &.headline2 { @include text-style(36px, normal, black); }
+    &.headline2-bold { @include text-style(36px, bold, black); }
+    &.headline3 { @include text-style(28px, normal, black); }
+    &.headline3-bold { @include text-style(28px, bold, black); }
+    &.headline4 { @include text-style(24px, normal, black); }
+    &.headline4-bold { @include text-style(24px, bold, black); }
+    &.title1 { @include text-style(22px, normal, black); }
+    &.title1-bold { @include text-style(22px, bold, black); }
+    &.title2 { @include text-style(20px, normal, black); }
+    &.title2-bold { @include text-style(20px, bold, black); }
+    &.title3 { @include text-style(18px, normal, black); }
+    &.title3-bold { @include text-style(18px, bold, black); }
+    &.body1 { @include text-style(16px, normal, black); }
+    &.body1-bold { @include text-style(16px, bold, black); }
+    &.body2 { @include text-style(14px, normal, black); }
+    &.body2-gray { @include text-style(14px, normal, gray); }
+    &.body2-bold { @include text-style(14px, bold, black); }
+    &.body3 { @include text-style(12px, normal, black); }
+    &.body3-bold { @include text-style(12px, bold, black); }
 }

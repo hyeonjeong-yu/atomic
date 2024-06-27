@@ -6,7 +6,7 @@ import ModalContainer from '../../Organism/ModalContainer/ModalContainer'
 const Modal = ({
     modalType,
     title,
-    subtitle,
+    description,
     contents,
     onClose,
 }) => {
@@ -16,7 +16,7 @@ const Modal = ({
             <ModalContainer
                 modalType={modalType}
                 title={title}
-                subtitle={subtitle}
+                description={description}
                 contents={contents}
                 onClose={onClose}
             />

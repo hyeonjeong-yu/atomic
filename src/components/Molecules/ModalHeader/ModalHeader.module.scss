@@ -1,6 +1,8 @@
 .ModalHeader {
     display: flex;
     flex-direction: column;
+    border-left: 4px solid #540DD9;
+    padding-left: 16px;
 
     &>div {
         display: flex;

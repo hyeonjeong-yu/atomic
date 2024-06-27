@@ -74,15 +74,17 @@ function App() {
         {
             icon: 'car',
             title: 'section 1',
+            description: 'section의 description',
             size: 'small',
             contents: [
-                {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-03'},
-                {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-04'}
+                {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-03', details: '안녕1'},
+                {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-04', details: '안녕2'}
             ],
         },
         {
             icon: '',
             title: 'section 2',
+            description: 'section의 description',
             size: 'small',
             contents: [
                 {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-05'},
@@ -92,6 +94,7 @@ function App() {
         {
             icon: '',
             title: 'section 3',
+            description: 'section의 description',
             size: 'small',
             showRightIcon: true,
             contents: [
@@ -102,6 +105,7 @@ function App() {
         {
             icon: '',
             title: 'section 4',
+            description: 'section의 description',
             size: 'small',
             showRightIcon: true,
             contents: [
@@ -112,6 +116,7 @@ function App() {
         {
             icon: '',
             title: 'section 5',
+            description: 'section의 description',
             size: 'medium',
             contents: [
                 {title: '(WEB) 관제 시스템 업데이트 완료 안내', date: '2024-06-07'},
@@ -141,6 +146,8 @@ function App() {
 
       // modal open & modal content update
       const handleCardItemClick = (item) => {
+        // item: headerTitle, title, date, details
+        // console.log(item)
         setActiveModalContent(item)
         setIsModalOpen(true);
       }
@@ -183,6 +190,7 @@ function App() {
                 size='medium'
                 showRightIcon={true}
                 items={notices}
+                onItemClick={handleCardItemClick}
             />
             
             {/* <h3>Charts</h3>
@@ -196,9 +204,9 @@ function App() {
                 isModalOpen && activeModalContent && (
                     <Modal
                         modalType='default'
-                        title='modalheader title'
-                        subtitle='modalheader subtitle'
-                        contents={activeModalContent.date}
+                        title={activeModalContent.headerTitle}
+                        description='modalheader description'
+                        contents={activeModalContent}
                         onClose={handleCloseModal}
                     />
                 )

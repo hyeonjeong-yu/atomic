@@ -6,17 +6,13 @@ import { RiCloseFill } from "react-icons/ri";
 
 const ModalHeader = ({
     title,
-    subtitle,
+    description,
     onClose
 }) => {
-
-    // const onClose = () => {
-    //     console.log('a');
-    // }
     return (
         <div className={`${styles.ModalHeader}`}>
             <div>
-                <Text>{title}</Text>
+                <Text variant='title3-bold'>{title}</Text>
                 <Button
                     type='button'
                     icon={RiCloseFill} 
@@ -25,7 +21,7 @@ const ModalHeader = ({
                     onClick={onClose}
                 />
             </div>
-            <Text>{subtitle}</Text>
+            <Text variant='body2-gray'>{description}</Text>
         </div>
     )
 }
