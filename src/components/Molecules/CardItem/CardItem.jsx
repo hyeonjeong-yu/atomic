@@ -15,8 +15,8 @@ const CardItem = ({
             // headerTitle, title, date, details 전달
             onClick={() => onClick({headerTitle, title, date, details})}
         > 
-            <Text variant='body4'>{title}</Text>
-            <Text variant='body5'>{date}</Text>
+            <Text variant='body2'>{title}</Text>
+            <Text variant='body3-gray'>{date}</Text>
         </div>
     )
 }

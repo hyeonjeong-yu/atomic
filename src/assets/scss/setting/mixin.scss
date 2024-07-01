@@ -1,0 +1,14 @@
+$font-weight: (
+    normal: 500,
+    bold: 700
+);
+$color: (
+    black: var(--black),
+    gray: var(--gray),
+);
+
+@mixin text-style($size, $weight, $color) {
+    font-size: $size;
+    font-weight: map-get($font-weight, $weight);
+    color: $color;
+}

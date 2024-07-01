@@ -10,7 +10,7 @@ const Dropdown = ({
 }) => {
     return (
         <div className={`${styles.Dropdown}`}>
-            <Button type='button' onClick={toggleDropdown}>
+            <Button type='button' size='large' onClick={toggleDropdown}>
                 {title}
             </Button>
             {   

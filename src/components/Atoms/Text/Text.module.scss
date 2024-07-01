@@ -1,45 +1,35 @@
-$font-weight: (
-    normal: 500,
-    bold: 700
-);
-$color: (
-    black: #434343,
-    gray: #8c8c8c
-);
+@use '../../../assets/scss/setting/mixin.scss' as mixins;
 
-@mixin text-style($size, $weight, $color) {
-    font-size: $size;
-    font-weight: map-get($font-weight, $weight);
-    color: $color;
-}
+
 .Text{
     cursor: default;
     
-    &.display1 { @include text-style(112px, normal, black); }
-    &.display1-bold { @include text-style(112px, bold, black); }
-    &.display2 { @include text-style(80px, normal, black); }
-    &.display2-bold { @include text-style(80px, bold, black); }
-    &.display3 { @include text-style(60px, normal, black); }
-    &.display3-bold { @include text-style(60px, bold, black); }
-    &.headline1 { @include text-style(48px, normal, black); }
-    &.headline1-bold { @include text-style(48px, bold, black); }
-    &.headline2 { @include text-style(36px, normal, black); }
-    &.headline2-bold { @include text-style(36px, bold, black); }
-    &.headline3 { @include text-style(28px, normal, black); }
-    &.headline3-bold { @include text-style(28px, bold, black); }
-    &.headline4 { @include text-style(24px, normal, black); }
-    &.headline4-bold { @include text-style(24px, bold, black); }
-    &.title1 { @include text-style(22px, normal, black); }
-    &.title1-bold { @include text-style(22px, bold, black); }
-    &.title2 { @include text-style(20px, normal, black); }
-    &.title2-bold { @include text-style(20px, bold, black); }
-    &.title3 { @include text-style(18px, normal, black); }
-    &.title3-bold { @include text-style(18px, bold, black); }
-    &.body1 { @include text-style(16px, normal, black); }
-    &.body1-bold { @include text-style(16px, bold, black); }
-    &.body2 { @include text-style(14px, normal, black); }
-    &.body2-gray { @include text-style(14px, normal, gray); }
-    &.body2-bold { @include text-style(14px, bold, black); }
-    &.body3 { @include text-style(12px, normal, black); }
-    &.body3-bold { @include text-style(12px, bold, black); }
+    &.display1 { @include mixins.text-style(112px, normal, black); }
+    &.display1-bold { @include mixins.text-style(112px, bold, black); }
+    &.display2 { @include mixins.text-style(80px, normal, black); }
+    &.display2-bold { @include mixins.text-style(80px, bold, black); }
+    &.display3 { @include mixins.text-style(60px, normal, black); }
+    &.display3-bold { @include mixins.text-style(60px, bold, black); }
+    &.headline1 { @include mixins.text-style(48px, normal, black); }
+    &.headline1-bold { @include mixins.text-style(48px, bold, black); }
+    &.headline2 { @include mixins.text-style(36px, normal, black); }
+    &.headline2-bold { @include mixins.text-style(36px, bold, black); }
+    &.headline3 { @include mixins.text-style(28px, normal, black); }
+    &.headline3-bold { @include mixins.text-style(28px, bold, black); }
+    &.headline4 { @include mixins.text-style(24px, normal, black); }
+    &.headline4-bold { @include mixins.text-style(24px, bold, black); }
+    &.title1 { @include mixins.text-style(22px, normal, black); }
+    &.title1-bold { @include mixins.text-style(22px, bold, black); }
+    &.title2 { @include mixins.text-style(20px, normal, black); }
+    &.title2-bold { @include mixins.text-style(20px, bold, black); }
+    &.title3 { @include mixins.text-style(18px, normal, black); }
+    &.title3-bold { @include mixins.text-style(18px, bold, black); }
+    &.body1 { @include mixins.text-style(16px, normal, black); }
+    &.body1-bold { @include mixins.text-style(16px, bold, black); }
+    &.body2 { @include mixins.text-style(14px, normal, black); }
+    &.body2-gray { @include mixins.text-style(14px, normal, gray); }
+    &.body2-bold { @include mixins.text-style(14px, bold, black); }
+    &.body3 { @include mixins.text-style(12px, normal, black); }
+    &.body3-bold { @include mixins.text-style(12px, bold, black); }
+    &.body3-gray { @include mixins.text-style(12px, normal, gray); }
 }

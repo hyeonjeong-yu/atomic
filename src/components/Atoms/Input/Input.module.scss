@@ -1,7 +1,41 @@
 .Input {
-    height: 20px;
+    width: 240px;
+    height: 48px;
     border-radius: 8px;
-    padding: 6px 10px;
-    border: 1px solid #f2f2f2;
-    outline: none;
+    // padding-left: 16px;
+    box-sizing: border-box;
+    border: 1px solid #70737C29;
+    // outline: none;
+    display: flex;
+    gap: 8px;
+    // justify-content: space-between;
+    align-items: center;
+
+    input {
+        flex: 1;
+        outline: none;
+        ::placeholder {
+            color: var(--gray-50);
+        }
+    }
+
+    .icon {
+        height: 16px;
+        padding-left: 16px;
+    }
+    .iconVisible {
+        opacity: 1;
+    }
+    .iconHidden {
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+
+    .inputWithIcon {
+        width: 100px;
+    }
+    .inputWithoutIcon{
+        padding-left: 22px;
+    }
 }
+

@@ -3,6 +3,7 @@ import Text from "./components/Atoms/Text/Text";
 import CheckboxGroup from "./components/Molecules/CheckboxGroup/CheckboxGroup";
 import Tab from "./components/Molecules/Tab/Tab";
 import DropdownMenu from "./components/Organism/DropdownMenu/DropdownMenu";
+import Button from "./components/Atoms/Button/Button";
 import ButtonGroup from "./components/Molecules/ButtonGroup/ButtonGroup";
 import { buttons } from "./components/Molecules/ButtonGroup/data";
 import React, { useMemo, useState } from 'react';
@@ -13,6 +14,9 @@ import Chart from "./components/Molecules/Charts/Chart";
 import BarChart from "./components/Molecules/Charts/BarChart";
 import CardSection from "./components/Templates/CardSection/CardSection";
 import Modal from "./components/Templates/Modal/Modal";
+import Input from "./components/Atoms/Input/Input";
+import InputWithIcon from "./components/Molecules/InputWithIcon/InputWithIcon";
+import { BiSearch } from "react-icons/bi";
 
 function App() {
 
@@ -176,6 +180,10 @@ function App() {
             <h3>Tab</h3>
             <Tab tabs={tabs} />
 
+            <h3>Buttons</h3>
+            <Button variant='primary' state='default' size='medium'>Button</Button>
+            <Button variant='secondary' state='default' size='medium'>Button</Button>
+
             <h3>ButtonGroup</h3>
             <ButtonGroup buttons={buttons} />
 
@@ -211,6 +219,14 @@ function App() {
                     />
                 )
             }
+
+            <h3>InputwithIcon</h3>
+            {/* <InputWithIcon iconName = 'search'
+                            type ='text'
+                            placeholder ='placeholder'
+            /> */}
+            <Input icon={BiSearch} type='text' placeholder='placeholder' />
+            <Input type='text' placeholder='placeholder' />
         </div>
     );
 }

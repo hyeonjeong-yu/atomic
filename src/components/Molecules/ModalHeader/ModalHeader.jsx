@@ -17,7 +17,7 @@ const ModalHeader = ({
                     type='button'
                     icon={RiCloseFill} 
                     variant='hide' 
-                    size='toosmall' 
+                    size='small-icon'
                     onClick={onClose}
                 />
             </div>

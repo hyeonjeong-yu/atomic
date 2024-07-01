@@ -4,16 +4,16 @@ import styles from './Button.module.scss'
 import { IconContext } from 'react-icons';
 
 const buttonType = ['submit', 'button'];
-const colorType = ['primary', 'secondary'];
-const variantType = ['default', 'dashed', 'disabled', 'error', 'hide'];
-const sizeType = ['toosmall', 'small', 'medium', 'large'];
+const variantType = ['primary', 'secondary'];
+const stateType = ['default', 'hover', 'disabled', 'error'];
+// const sizeType = ['small-icon', 'small', 'medium', 'large'];
 
 const Button = ({
     //initialize
     type,
-    color,
-    variant = 'default',
-    size = 'medium',
+    variant,
+    state,
+    size,
     label,
     children,
     icon: Icon,
@@ -25,7 +25,7 @@ const Button = ({
         <button
             type = {type}
             className = {`${styles.Button}
-                        ${styles[color]}
+                        ${styles[state]}
                         ${styles[variant]}
                         ${styles[size]}
                         ${disabled ? 'disabled' : ''}
@@ -48,9 +48,9 @@ const Button = ({
 // props의 타입 지정 (문자열, 필수)
 Button.propTypes = {
     type: PropTypes.oneOf(buttonType).isRequired,
-    color: PropTypes.oneOf(colorType),
     variant: PropTypes.oneOf(variantType),
-    size: PropTypes.oneOf(sizeType),
+    state: PropTypes.oneOf(stateType),
+    size: PropTypes.string,
     label: PropTypes.string, 
     children: PropTypes.node, 
     icon: PropTypes.object,

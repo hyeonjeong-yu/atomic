@@ -1,9 +1,33 @@
-$primary: #1a7aff;
-$secondary: #fe9073;
+
+$colors: (
+    primary: var(--primary),
+    secondary: var(--white),
+);
+
+@mixin button-color($color-key) {
+    $color: map-get($colors, $color-key);
+    background-color: $color;
+    &:hover {
+    }
+    &:disabled {
+    }
+}
+
+@mixin button-size($wSize, $hSize, $radius: 0) {
+    width: $wSize;
+    height: $hSize;
+
+    @if $radius != 0 {
+        border-radius: $radius;
+    }
+}
 
 .Button {
-    border-radius: 8px;
+    border-radius: 32px;
     cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
     
     img {
         width: 20px;
@@ -14,21 +38,31 @@ $secondary: #fe9073;
         height: 20px;
     }
 
-    //  COLOR
+    //  VARIANT
     &.primary {
-        background-color: $primary;
-        color:#ffff;
+        @include button-color(primary);
+        color: var(--white);
         border: none;
+        &:hover {
+            background-color: var(--primary-40);
+        }
+        &:disabled {
+            background-color: var(--primary-90);
+        } 
     }
     &.secondary {
-        background-color: $secondary;
-        color: #ffff;
-        border: none;
+        @include button-color(secondary);
+        color: var(--primary);
+        border: 1px solid var(--primary);
+        &:hover {
+            background-color: var(--primary-100);
+            border: 1px solid var(--primary-40);
+        }
     }
 
-    // VARIANT
+    // STATE
     &.dashed {
-        background-color: #ffffff;
+        background-color: var(--white);
         color: initial;
         border: 1.5px dashed #d9d9d9;
     }
@@ -43,31 +77,21 @@ $secondary: #fe9073;
         border: none;
         cursor: not-allowed;
     }
-    &.hide {
-        background-color: #ffff;
-        border-radius: none;
-        border: none;
-    }
 
     // SIZE
-    &.toosmall{
-        width: 20px;
-        height: 20px;
-        
+    &.small-icon{
+        @include button-size(20px, 20px, 8px);
     }
     &.small{
-        width: 60px;
-        height: 60px;
-        padding: 5px;
+        @include button-size(4.0rem, 4.0rem, 3px);
+        // padding: 5px;
     }
     &.medium{
-        width: 300px;
-        height: 32px;
-        padding: 5px;
+        @include button-size(105px, 36px, 32px);
+        padding: 0.5rem 1rem;
     }
     &.large{
-        width: 400px;
-        height: 40px;
-        padding: 5px;
+        @include button-size(280px, 36px);
+        padding: 4px;
     }
 }

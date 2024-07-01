@@ -9,7 +9,7 @@ const CardHeader = ({ icon, title, showRightIcon }) => {
             <div>
                 {/* Icon 바로 렌더링 */}
                 <Icon name={icon} color='purple' />
-                <Text variant='body3-bold'>{title}</Text>
+                <Text variant='body1-bold'>{title}</Text>
             </div>
             {
                 showRightIcon && <Icon name='arrow' color='gray' />

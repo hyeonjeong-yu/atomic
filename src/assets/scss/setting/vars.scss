@@ -5,5 +5,16 @@
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
-    color: #434343;
+    color: var(--black);
+    letter-spacing: -2.5%;
+
+    --black: #434343;
+    --gray: (#8C8C8C);
+    --gray-50: ##BFBFBF;
+    --white: #FFFF;
+
+    --primary: #540DD9;
+    --primary-100: #F2EBFF;
+    --primary-90: #DECCFF;
+    --primary-40: #4608BA;
 }

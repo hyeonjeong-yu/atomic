@@ -9,8 +9,8 @@ const ModalBody = ({
     return (
         <div className={`${styles.ModalBody}`}>
             <div className={`${styles.headerContent}`}>
-                <Text>{contents.title}</Text>
-                <Text>{contents.date}</Text>
+                <Text variant='body2-bold'>{contents.title}</Text>
+                <Text variant='body3-gray'>{contents.date}</Text>
             </div>
             <div className={`${styles.bodyContent}`}>
                 <Text>{contents.details}</Text>
