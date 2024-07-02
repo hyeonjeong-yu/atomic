@@ -15,7 +15,6 @@ import BarChart from "./components/Molecules/Charts/BarChart";
 import CardSection from "./components/Templates/CardSection/CardSection";
 import Modal from "./components/Templates/Modal/Modal";
 import Input from "./components/Atoms/Input/Input";
-import InputWithIcon from "./components/Molecules/InputWithIcon/InputWithIcon";
 import { BiSearch } from "react-icons/bi";
 
 function App() {
@@ -221,12 +220,10 @@ function App() {
             }
 
             <h3>InputwithIcon</h3>
-            {/* <InputWithIcon iconName = 'search'
-                            type ='text'
-                            placeholder ='placeholder'
-            /> */}
             <Input icon={BiSearch} type='text' placeholder='placeholder' />
             <Input type='text' placeholder='placeholder' />
+            <Input type='text' label='id' placeholder='placeholder' />
+            <Input type='text' label='id' icon={BiSearch} placeholder='placeholder' />
         </div>
     );
 }

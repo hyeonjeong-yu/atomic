@@ -1,6 +1,6 @@
 .Input {
     width: 240px;
-    height: 48px;
+    // height: 48px;
     border-radius: 8px;
     // padding-left: 16px;
     box-sizing: border-box;
@@ -8,11 +8,19 @@
     // outline: none;
     display: flex;
     gap: 8px;
-    // justify-content: space-between;
     align-items: center;
 
+    .inputwrapper {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
     input {
-        flex: 1;
+        // flex: 1;
         outline: none;
         ::placeholder {
             color: var(--gray-50);
@@ -21,21 +29,41 @@
 
     .icon {
         height: 16px;
-        padding-left: 16px;
-    }
-    .iconVisible {
-        opacity: 1;
-    }
-    .iconHidden {
-        opacity: 0;
-        transition: opacity 0.2s ease;
+        // padding-left: 16px;
+        &.iconVisible {
+            opacity: 1;
+        }
+        &.iconHidden {
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
     }
 
-    .inputWithIcon {
-        width: 100px;
+    // Input setting
+    &.InputWithIcon {
+        border: 1px solid red;
     }
-    .inputWithoutIcon{
-        padding-left: 22px;
+    &.InputWithLabel {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+        border: none;
+
+        input {
+            width: 100%;
+            border: 1px solid #70737C29;
+            border-radius: 8px;
+        }
+    }
+    &.InputWithIconLabel {
+        border: 1px solid red;
+        .inputwrapper {
+            border: 1px solid #70737C29;
+        }
+        input {
+            border: none;
+        }
     }
 }
 
